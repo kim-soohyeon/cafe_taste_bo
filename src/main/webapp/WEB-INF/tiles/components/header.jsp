@@ -1,16 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<style>@import url(//fonts.googleapis.com/earlyaccess/jejuhallasan.css);</style>
 <!--header start-->
  <header class="header black-bg">
 	<div class="sidebar-toggle-box">
     	<div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
    	</div>
    	<!--logo start-->
-   	<a href="index.html" class="logo"><b>카페<span>취향</span></b></a>
+   	<a href="/" class="logo"><b style="font-family: Jeju Hallasan, cursive;">카페<span>취향</span></b></a>
    	<!--logo end-->
    	<div class="nav notify-row" id="top_menu">
     	<!--  notification start -->
-     	<ul class="nav top-menu">
-       		<!-- settings start -->
+     	<!-- <ul class="nav top-menu">
+       		settings start
        		<li class="dropdown">
          		<a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
            			<i class="fa fa-tasks"></i>
@@ -78,8 +79,8 @@
 	          	 	</li>
 	         	</ul>
        		</li>
-      	 	<!-- settings end -->
-       		<!-- inbox dropdown start-->
+      	 	settings end
+       		inbox dropdown start
 	       	<li id="header_inbox_bar" class="dropdown">
 	        	<a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
 	           		<i class="fa fa-envelope-o"></i>
@@ -143,8 +144,8 @@
 		           	</li>
 	         	</ul>
 	       	</li>
-       		<!-- inbox dropdown end -->
-       		<!-- notification dropdown start-->
+       		inbox dropdown end
+       		notification dropdown start
 	       	<li id="header_notification_bar" class="dropdown">
 	         	<a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
 	           		<i class="fa fa-bell-o"></i>
@@ -188,8 +189,8 @@
 		           	</li>
 	         	</ul>
 	       	</li>
-       		<!-- notification dropdown end -->
-     	</ul>
+       		notification dropdown end
+     	</ul> -->
      	<!--  notification end -->
    	</div>
    	<div class="top-menu">
