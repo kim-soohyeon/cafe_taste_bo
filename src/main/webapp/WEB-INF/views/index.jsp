@@ -29,7 +29,6 @@
 	<script src="lib/chart-master/Chart.js"></script>
 </head>
 <body>
-  <section id="container">
     <!-- **********************************************************************************************************************************************************
         TOP BAR CONTENT & NOTIFICATIONS
         *********************************************************************************************************************************************************** -->
@@ -804,7 +803,6 @@
       </div>
     </footer>
     <!--footer end-->
-  </section>
   <!-- js placed at the end of the document so the pages load faster -->
   <script src="lib/jquery/jquery.min.js"></script>
 

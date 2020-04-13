@@ -34,7 +34,11 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "home";
+		return "statics/home";
 	}
 	
+	@RequestMapping(value = "/{var}", method = RequestMethod.GET) 
+	public String base(@PathVariable String var) { 
+		return var; 
+	}
 }
