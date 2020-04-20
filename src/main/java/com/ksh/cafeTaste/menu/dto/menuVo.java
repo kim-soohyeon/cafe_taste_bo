@@ -18,6 +18,7 @@ public class menuVo {
 	private Double caffeine;
 	private String status;
 	private String allergy;
+	private String imgSrc;
 	
 	
 }

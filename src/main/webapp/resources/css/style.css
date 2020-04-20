@@ -13,6 +13,7 @@ Website: http://Alvarez.is/
 
 /* Import fonts */
 @import url(http://fonts.googleapis.com/css?family=Ruda:400,700,900);
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
 
 /* BASIC THEME CONFIGURATION */
 body {
@@ -3483,4 +3484,17 @@ ul.chat-available-user li a:hover {
 
 #copyrights a {
   color: #fff;
+}
+
+.btn-outline-brown {
+    color: #8a6d3b;
+    background-color: #fafafa;
+    border-color: #8a6d3b;
+    padding: 2px 6px;
+    font-size: 13px;
+    font-family: Jeju Gothic, cursive;
+}
+
+.font-JejuGothic {
+	font-family: Jeju Gothic, cursive;
 }

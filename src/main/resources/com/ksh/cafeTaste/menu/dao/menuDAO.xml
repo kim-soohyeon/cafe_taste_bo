@@ -18,6 +18,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		,caffeine
 		,status
 		,allergy
+		,imgSrc
 	) values(
 		#{type}
 		,#{menuNm}
@@ -31,6 +32,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		,#{caffeine}
 		,#{status}
 		,#{allergy}
+		,#{imgSrc}
 	)
 </insert>
+
+<select id="getMenuList" resultType="java.util.HashMap">
+	SELECT id
+		,type
+		,menuNm
+		,kind
+		,status
+	FROM menu
+	ORDER BY id, status
+</select>
+
+
 </mapper>

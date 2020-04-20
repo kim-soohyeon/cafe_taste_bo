@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<style>@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);</style>
 <!-- **********************************************************************************************************************************************************
 	MAIN SIDEBAR MENU
 	*********************************************************************************************************************************************************** -->
@@ -7,15 +6,15 @@
 <aside>                                                                                                                                             
   <div id="sidebar" class="nav-collapse ">                                                                                                          
     <!-- sidebar menu start-->                                                                                                                      
-    <ul class="sidebar-menu" id="nav-accordion">                                                                                                    
+    <ul class="sidebar-menu font-JejuGothic" id="nav-accordion">                                                                                                    
       <p class="centered"><a href="profile.html"><img src="${pagecontext.request.contextpath}/img/ui-ksh.jpg" class="img-circle" width="80"></a></p>                                   
       <h5 class="centered">김수현</h5>                                                                                                          
       <li class="mt">                                                                                                                               
-        <a class="active" href="/menu">                                                                                                        
-          <i class="fa fa-dashboard"></i>                                                                                                           
-          <span style="font-family: Jeju Gothic, cursive;">메뉴 등록</span>                                                                                                                    
+        <a class="active" href="/menu/getMenu">                                                                                                        
+          <i class="fa fa-tasks"></i>                                                                                                           
+          <span>메뉴 관리</span>                                                                                                                    
         </a>                                                                                                                                      
-      </li>                                                                                                                                         
+      </li>
       <!-- <li class="sub-menu">                                                                                                                         
         <a href="javascript:;">                                                                                                                     
           <i class="fa fa-desktop"></i>                                                                                                             

@@ -30,6 +30,7 @@
 		<!-- Custom styles for this template -->
 		<link href="${pagecontext.request.contextpath}/css/style.css" rel="stylesheet">
 		<link href="${pagecontext.request.contextpath}/css/style-responsive.css" rel="stylesheet">
+		<script src="${pagecontext.request.contextpath}/lib/jquery-3.5.0.min.js"></script>
 		<script src="${pagecontext.request.contextpath}/lib/chart-master/Chart.js"></script>
     </head>
     <body>

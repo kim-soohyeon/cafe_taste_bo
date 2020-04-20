@@ -9,7 +9,7 @@
 <!--main content start-->
 <section id="main-content">
 	<section class="wrapper">
-    	<h3><i class="fa fa-angle-right"></i> 메뉴 등록</h3>
+    	<h3 class="font-JejuGothic"><i class="fa fa-angle-right"></i> 메뉴 등록</h3>
     	<!-- BASIC FORM ELELEMNTS -->
     	<div class="row mt">
       		<div class="col-lg-12">
@@ -50,8 +50,11 @@
 		                  	</div>
 		                </div>
 		                <div class="form-group">
-		                	<label class="col-sm-2">Image Upload</label>
-		                  	<div class="col-md-9">
+		                	<label class="col-sm-2">메인 이미지</label>
+		                	<div class="col-sm-10">
+		                    	<input type="text" name="imgSrc" placeholder="이미지 링크를 입력하세요." class="form-control" required>
+		                 	 </div>
+		                  	<!-- <div class="col-md-9">
 		                    	<div class="fileupload fileupload-new" data-provides="fileupload">
 			                      	<div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
 			                        	<img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="">
@@ -70,7 +73,7 @@
 		                    	<span>
 			                      	이미지 사이즈를 준수해주세요.
 			                    </span>
-		                  	</div>
+		                  	</div> -->
 		                </div>
 		                <div class="form-group">
 		                	<label class="col-sm-2 col-sm-2 control-label">상세 설명</label>
@@ -125,7 +128,7 @@
 		                <div class="form-group last">
 			                <div class="col-sm-12 text-center">		                
 			                	<button type="submit" class="btn btn-theme">등록</button>
-			                	<!-- <button class="btn btn-theme04" type="button">취소</button> -->
+			                	<button onclick="location.href='/menu/getMenu'" class="btn btn-theme04" type="button">취소</button>
 			                </div>
 		                </div>
               		</form>
@@ -145,18 +148,18 @@
 <!--script for this page-->
 <script src="${pagecontext.request.contextpath}/lib/jquery-ui-1.9.2.custom.min.js"></script>
 <!--custom switch-->
-<!-- <script src="${pagecontext.request.contextpath}/lib/bootstrap-switch.js"></script> -->
+<script src="${pagecontext.request.contextpath}/lib/bootstrap-switch.js"></script>
 <!--custom tagsinput-->
-<!-- <script src="${pagecontext.request.contextpath}/lib/jquery.tagsinput.js"></script> -->
+<script src="${pagecontext.request.contextpath}/lib/jquery.tagsinput.js"></script>
 <!--custom checkbox & radio-->
 <script type="text/javascript" src="${pagecontext.request.contextpath}/lib/bootstrap-fileupload/bootstrap-fileupload.js"></script>
 <script type="text/javascript" src="${pagecontext.request.contextpath}/lib/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
 <script type="text/javascript" src="${pagecontext.request.contextpath}/lib/bootstrap-daterangepicker/date.js"></script>
 <script type="text/javascript" src="${pagecontext.request.contextpath}/lib/bootstrap-daterangepicker/daterangepicker.js"></script>
-<!-- <script type="text/javascript" rc="${pagecontext.request.contextpath}/lib/bootstrap-inputmask/bootstrap-inputmask.min.js"></script> -->
+<script type="text/javascript" rc="${pagecontext.request.contextpath}/lib/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
 <script type="text/javascript" src="${pagecontext.request.contextpath}/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
 <script type="text/javascript" src="${pagecontext.request.contextpath}/lib/bootstrap-daterangepicker/moment.min.js"></script>
 <script type="text/javascript" src="${pagecontext.request.contextpath}/lib/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
 <script src="${pagecontext.request.contextpath}/lib/advanced-form-components.js"></script>
-<!-- <script src="${pagecontext.request.contextpath}/lib/form-component.js"></script> -->
+<script src="${pagecontext.request.contextpath}/lib/form-component.js"></script>
 </html>
