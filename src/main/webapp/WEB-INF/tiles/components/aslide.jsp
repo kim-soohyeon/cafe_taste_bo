@@ -8,12 +8,12 @@
   <div id="sidebar" class="nav-collapse ">                                                                                                          
     <!-- sidebar menu start-->                                                                                                                      
     <ul class="sidebar-menu" id="nav-accordion">                                                                                                    
-      <p class="centered"><a href="profile.html"><img src="img/ui-ksh.jpg" class="img-circle" width="80"></a></p>                                   
+      <p class="centered"><a href="profile.html"><img src="${pagecontext.request.contextpath}/img/ui-ksh.jpg" class="img-circle" width="80"></a></p>                                   
       <h5 class="centered">김수현</h5>                                                                                                          
       <li class="mt">                                                                                                                               
-        <a class="active" href="index.html">                                                                                                        
+        <a class="active" href="/menu">                                                                                                        
           <i class="fa fa-dashboard"></i>                                                                                                           
-          <span style="font-family: Jeju Gothic, cursive;">메뉴 관리</span>                                                                                                                    
+          <span style="font-family: Jeju Gothic, cursive;">메뉴 등록</span>                                                                                                                    
         </a>                                                                                                                                      
       </li>                                                                                                                                         
       <!-- <li class="sub-menu">                                                                                                                         

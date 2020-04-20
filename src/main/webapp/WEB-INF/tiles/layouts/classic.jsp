@@ -13,19 +13,24 @@
 		<title>카페 취향 - 관리자 시스템</title>
 		
 		<!-- Favicons -->
-		<link href="img/favicon.ico" rel="icon">
+		<link href="${pagecontext.request.contextpath}/img/favicon.ico" rel="icon">
 		<!-- <link href="img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 		
 		<!-- Bootstrap core CSS -->
-		<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="${pagecontext.request.contextpath}/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<!--external css-->
-		<link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
-		<link rel="stylesheet" type="text/css" href="css/zabuto_calendar.css">
-		<link rel="stylesheet" type="text/css" href="lib/gritter/css/jquery.gritter.css" />
+		<link href="${pagecontext.request.contextpath}/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="${pagecontext.request.contextpath}/lib/bootstrap-fileupload/bootstrap-fileupload.css" />
+	  	<link rel="stylesheet" type="text/css" href="${pagecontext.request.contextpath}/lib/bootstrap-datepicker/css/datepicker.css" />
+	  	<link rel="stylesheet" type="text/css" href="${pagecontext.request.contextpath}/lib/bootstrap-daterangepicker/daterangepicker.css" />
+	  	<link rel="stylesheet" type="text/css" href="${pagecontext.request.contextpath}/lib/bootstrap-timepicker/compiled/timepicker.css" />
+	  	<link rel="stylesheet" type="text/css" href="${pagecontext.request.contextpath}/lib/bootstrap-datetimepicker/datertimepicker.css" />
+		<link rel="stylesheet" type="text/css" href="${pagecontext.request.contextpath}/css/zabuto_calendar.css">
+		<link rel="stylesheet" type="text/css" href="${pagecontext.request.contextpath}/lib/gritter/css/jquery.gritter.css" />
 		<!-- Custom styles for this template -->
-		<link href="css/style.css" rel="stylesheet">
-		<link href="css/style-responsive.css" rel="stylesheet">
-		<script src="lib/chart-master/Chart.js"></script>
+		<link href="${pagecontext.request.contextpath}/css/style.css" rel="stylesheet">
+		<link href="${pagecontext.request.contextpath}/css/style-responsive.css" rel="stylesheet">
+		<script src="${pagecontext.request.contextpath}/lib/chart-master/Chart.js"></script>
     </head>
     <body>
             <tiles:insertAttribute name="header" />
