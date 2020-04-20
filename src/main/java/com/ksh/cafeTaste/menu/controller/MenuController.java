@@ -37,7 +37,7 @@ public class MenuController {
 	public String insertMenu(Model model, @ModelAttribute menuVo reqDto) { 
 		System.out.println(reqDto);
 		service.insertMenu(reqDto);
-		return "menu/menu";
+		return "menu/getMenu";
 	}
 
 	//메뉴 조회 GET

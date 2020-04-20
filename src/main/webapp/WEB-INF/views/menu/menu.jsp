@@ -46,6 +46,9 @@
 				                  	<option value="LAT">라떼</option>
 				                  	<option value="JUI">주스</option>
 				                  	<option value="SMO">스무디</option>
+				                  	<option value="BRE">빵</option>
+				                  	<option value="DES">디저트</option>
+				                  	<option value="COO">쿠키</option>
 				                </select>
 		                  	</div>
 		                </div>
