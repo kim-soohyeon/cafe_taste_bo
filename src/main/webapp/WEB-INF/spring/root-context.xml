@@ -24,9 +24,24 @@
         <property name="password" value="tn0709"></property>
     </bean>      
       
+    <!-- <bean id="dataSource" class="net.sf.log4jdbc.Log4jdbcProxyDataSource"> 
+		<constructor-arg ref="dataSourceSpied" /> 
+		<property name="logFormatter"> 
+			<bean class="net.sf.log4jdbc.tools.Log4JdbcCustomFormatter"> 
+				<property name="loggingType" value="MULTI_LINE" /> 
+				<property name="sqlPrefix" value="SQL : "/> 
+			</bean> 
+		</property> 
+	</bean> -->
+	
  	<!-- mybatis SqlSessionFactoryBean -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"></property>
     </bean>
+    
+    <mybatis-spring:scan
+		base-package="com.ksh.cafeTaste.menu.dao" />
+	<context:component-scan 
+		base-package="com.ksh.cafeTaste.menu.service"></context:component-scan>
 
 </beans>

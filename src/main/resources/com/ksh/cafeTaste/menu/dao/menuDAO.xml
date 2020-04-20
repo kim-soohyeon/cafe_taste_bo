@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ksh.cafeTaste.menu.dao.menuDAO">
+
+<insert id="insertMenu"> 
+	insert into menu (
+		type
+		,menuNm
+		,kind
+		,descript
+		,calorie
+		,sugar
+		,protein
+		,fat
+		,salt
+		,caffeine
+		,status
+		,allergy
+	) values(
+		#{type}
+		,#{menuNm}
+		,#{kind}
+		,#{descript}
+		,#{calorie}
+		,#{sugar}
+		,#{protein}
+		,#{fat}
+		,#{salt}
+		,#{caffeine}
+		,#{status}
+		,#{allergy}
+	)
+</insert>
+</mapper>

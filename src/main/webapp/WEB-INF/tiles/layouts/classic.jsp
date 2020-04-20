@@ -24,7 +24,7 @@
 	  	<link rel="stylesheet" type="text/css" href="${pagecontext.request.contextpath}/lib/bootstrap-datepicker/css/datepicker.css" />
 	  	<link rel="stylesheet" type="text/css" href="${pagecontext.request.contextpath}/lib/bootstrap-daterangepicker/daterangepicker.css" />
 	  	<link rel="stylesheet" type="text/css" href="${pagecontext.request.contextpath}/lib/bootstrap-timepicker/compiled/timepicker.css" />
-	  	<link rel="stylesheet" type="text/css" href="${pagecontext.request.contextpath}/lib/bootstrap-datetimepicker/datertimepicker.css" />
+	  	<link rel="stylesheet" type="text/css" href="${pagecontext.request.contextpath}/lib/bootstrap-datetimepicker/css/datetimepicker.css" />
 		<link rel="stylesheet" type="text/css" href="${pagecontext.request.contextpath}/css/zabuto_calendar.css">
 		<link rel="stylesheet" type="text/css" href="${pagecontext.request.contextpath}/lib/gritter/css/jquery.gritter.css" />
 		<!-- Custom styles for this template -->
