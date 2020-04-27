@@ -1,48 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <section id="main-content">
       <section class="wrapper">
         <div class="row">
           <div class="col-lg-9 main-chart">
             <!--CUSTOM CHART START -->
-            <div class="border-head">
-              <h3>USER VISITS</h3>
+            <div class="border-head font-JejuGothic">
+              <h3>연령별 커피 트렌드 (${todate2} 기준)</h3>
             </div>
-            <div class="custom-bar-chart">
-              <ul class="y-axis">
-                <li><span>10.000</span></li>
-                <li><span>8.000</span></li>
-                <li><span>6.000</span></li>
-                <li><span>4.000</span></li>
-                <li><span>2.000</span></li>
-                <li><span>0</span></li>
-              </ul>
-              <div class="bar">
-                <div class="title">JAN</div>
-                <div class="value tooltips" data-original-title="8.500" data-toggle="tooltip" data-placement="top">85%</div>
-              </div>
-              <div class="bar ">
-                <div class="title">FEB</div>
-                <div class="value tooltips" data-original-title="5.000" data-toggle="tooltip" data-placement="top">50%</div>
-              </div>
-              <div class="bar ">
-                <div class="title">MAR</div>
-                <div class="value tooltips" data-original-title="6.000" data-toggle="tooltip" data-placement="top">60%</div>
-              </div>
-              <div class="bar ">
-                <div class="title">APR</div>
-                <div class="value tooltips" data-original-title="4.500" data-toggle="tooltip" data-placement="top">45%</div>
-              </div>
-              <div class="bar">
-                <div class="title">MAY</div>
-                <div class="value tooltips" data-original-title="3.200" data-toggle="tooltip" data-placement="top">32%</div>
-              </div>
-              <div class="bar ">
-                <div class="title">JUN</div>
-                <div class="value tooltips" data-original-title="6.200" data-toggle="tooltip" data-placement="top">62%</div>
-              </div>
-              <div class="bar">
-                <div class="title">JUL</div>
-                <div class="value tooltips" data-original-title="7.500" data-toggle="tooltip" data-placement="top">75%</div>
-              </div>
+            <div class="custom-bar-chart" id="ageList">
             </div>
             <!--custom chart end-->
             <div class="row mt">
@@ -128,7 +94,7 @@
               <div class="col-md-4 mb">
                 <div class="weather pn">
                   <i class="fa fa-cloud fa-4x"></i>
-                  <h2>11� C</h2>
+                  <h2>11º C</h2>
                   <h4>BUDAPEST</h4>
                 </div>
               </div>
@@ -420,7 +386,44 @@
         <!-- /row -->
       </section>
     </section>
-    <!-- js placed at the end of the document so the pages load faster -->
+    
+    <!-- AgeItem -->
+    <script id="AgeItem" type="text/x-jquery-tmpl">
+	<ul class="y-axis">
+      <li><span>100</span></li>
+      <li><span>80</span></li>
+      <li><span>60</span></li>
+      <li><span>40</span></li>
+      <li><span>20</span></li>
+      <li><span>0</span></li>
+    </ul>
+    <div class="bar">
+      <div class="title">10대</div>
+      <div class="value tooltips" data-original-title="\${resBodyAge.results[0].data[0].ratio}" data-toggle="tooltip" data-placement="top" style="height: \${resBodyAge.results[0].data[0].ratio}%;">\${resBodyAge.results[0].data[0].ratio}</div>
+    </div>
+    <div class="bar ">
+      <div class="title">20대</div>
+      <div class="value tooltips" data-original-title="\${resBodyAge.results[0].data[1].ratio}" data-toggle="tooltip" data-placement="top" style="height: \${resBodyAge.results[0].data[1].ratio}%;">\${resBodyAge.results[0].data[1].ratio}</div>
+    </div>
+    <div class="bar ">
+      <div class="title">30대</div>
+      <div class="value tooltips" data-original-title="\${resBodyAge.results[0].data[2].ratio}" data-toggle="tooltip" data-placement="top" style="height: \${resBodyAge.results[0].data[2].ratio}%;">\${resBodyAge.results[0].data[2].ratio}</div>
+    </div>
+    <div class="bar ">
+      <div class="title">40대</div>
+      <div class="value tooltips" data-original-title="\${resBodyAge.results[0].data[3].ratio}" data-toggle="tooltip" data-placement="top" style="height: \${resBodyAge.results[0].data[3].ratio}%;">\${resBodyAge.results[0].data[3].ratio}</div>
+    </div>
+    <div class="bar">
+      <div class="title">50대</div>
+      <div class="value tooltips" data-original-title="\${resBodyAge.results[0].data[4].ratio}" data-toggle="tooltip" data-placement="top" style="height: \${resBodyAge.results[0].data[4].ratio}%;">\${resBodyAge.results[0].data[4].ratio}</div>
+    </div>
+    <div class="bar ">
+      <div class="title">60대</div>
+      <div class="value tooltips" data-original-title="\${resBodyAge.results[0].data[5].ratio}" data-toggle="tooltip" data-placement="top" style="height: \${resBodyAge.results[0].data[5].ratio}%;">\${resBodyAge.results[0].data[5].ratio}</div>
+    </div>
+    </script>
+    
+  <!-- js placed at the end of the document so the pages load faster -->
   <script src="${pagecontext.request.contextpath}/lib/jquery/jquery.min.js"></script>
 
   <script src="${pagecontext.request.contextpath}/lib/bootstrap/js/bootstrap.min.js"></script>
@@ -435,6 +438,8 @@
   <!--script for this page-->
   <script src="${pagecontext.request.contextpath}/lib/sparkline-chart.js"></script>
   <script src="${pagecontext.request.contextpath}/lib/zabuto_calendar.js"></script>
+  <script src="${pagecontext.request.contextpath}/lib/jquery-tmpl/jquery.tmpl.js"></script>
+  <script src="${pagecontext.request.contextpath}/lib/jquery-tmpl/jquery.tmpl.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
       var unique_id = $.gritter.add({
@@ -456,6 +461,10 @@
     });
   </script>
   <script type="application/javascript">
+	var resBodyGender = ${resBodyGender};
+	/* resBodyGender.results[0].data */
+	var resBodyAge = ${resBodyAge};
+	$('#AgeItem').tmpl(resBodyAge).appendTo('#ageList');
     $(document).ready(function() {
       $("#date-popover").popover({
         html: true,

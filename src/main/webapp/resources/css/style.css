@@ -848,7 +848,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
     height: 100%;
     position: relative;
     width: 6%;
-    margin: 0px 4%;
+    margin: 0px 5%;
     float: left;
     text-align: center;
     z-index: 10;
@@ -865,9 +865,9 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 .custom-bar-chart .bar .value {
     position: absolute;
     bottom: 0;
-    background: #4ECDC4;
-    color: #4ECDC4;
-    width: 100%;
+    background: #635337;
+    color: #ffff;
+    width: 110%;
     -webkit-border-radius: 5px 5px 0 0;
     -moz-border-radius: 5px 5px 0 0;
     border-radius: 5px 5px 0 0;
@@ -878,10 +878,8 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
     transition: all .3s ease;
 }
 
-
-
 .custom-bar-chart .bar .value:hover {
-    background: #2f2f2f;
+    background: #9d9967d1;
     color: #fff;
 }
 
