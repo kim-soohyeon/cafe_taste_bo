@@ -34,6 +34,9 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
+		ApiExamDatalabTrendShopping api = new ApiExamDatalabTrendShopping();
+		api.main(null);
+		
 		return "statics/home";
 	}
 	
