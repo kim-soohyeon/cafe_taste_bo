@@ -15,28 +15,30 @@
               <!-- SERVER STATUS PANELS -->
               <div class="col-md-4 col-sm-4 mb">
                 <div class="grey-panel pn donut-chart">
-                  <div class="grey-header">
-                    <h5>SERVER LOAD</h5>
+                  <div class="grey-header font-JejuGothic">
+                    <h5>성별 커피 트렌드</h5>
                   </div>
                   <canvas id="serverstatus01" height="120" width="120"></canvas>
                   <script>
+                    var resBodyGender = ${resBodyGender};
+                    
+                    
                     var doughnutData = [{
-                        value: 70,
+                        value: Math.round(resBodyGender.results[0].data[0].ratio * 0.72),
                         color: "#FF6B6B"
                       },
                       {
-                        value: 30,
+                        value: Math.round(resBodyGender.results[0].data[1].ratio * 0.72),
                         color: "#fdfdfd"
                       }
                     ];
                     var myDoughnut = new Chart(document.getElementById("serverstatus01").getContext("2d")).Doughnut(doughnutData);
-                  </script>
+                    
+                    </script>
                   <div class="row">
-                    <div class="col-sm-6 col-xs-6 goleft">
-                      <p>Usage<br/>Increase:</p>
+                    <div class="col-sm-6 col-xs-6 goleft" style="text-align: right;" id="m">
                     </div>
-                    <div class="col-sm-6 col-xs-6">
-                      <h2>21%</h2>
+                    <div class="col-sm-6 col-xs-6 goleft" style="color: #FF6B6B;" id="f">
                     </div>
                   </div>
                 </div>
@@ -461,11 +463,21 @@
     });
   </script>
   <script type="application/javascript">
-	var resBodyGender = ${resBodyGender};
-	/* resBodyGender.results[0].data */
+  	//연령별 커피 트렌드
 	var resBodyAge = ${resBodyAge};
 	$('#AgeItem').tmpl(resBodyAge).appendTo('#ageList');
+	//성별 커피 트렌드
+    var dataF="<p>여<br/>"+Math.round(resBodyGender.results[0].data[0].ratio * 0.72) + "%</p>";
+    var dataM="<p>남<br/>"+Math.round(resBodyGender.results[0].data[1].ratio * 0.72) + "%</p>";
     $(document).ready(function() {
+    	//성별 커피 트렌드
+    	$(".goleft").each(function() {
+    		if($(this).attr('id') == "m"){
+    			$(this).html(dataM);
+    		}else{
+    			$(this).html(dataF);
+    		}
+        });
       $("#date-popover").popover({
         html: true,
         trigger: "manual"
