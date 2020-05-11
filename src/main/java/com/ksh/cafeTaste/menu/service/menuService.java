@@ -11,4 +11,6 @@ public interface menuService {
 
 	public List<HashMap> getMenuList();
 
+	public menuVo getMenuDtlById(int id);
+
 }

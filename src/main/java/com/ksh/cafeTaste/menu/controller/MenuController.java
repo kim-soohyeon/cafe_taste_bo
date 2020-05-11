@@ -8,9 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -28,10 +30,13 @@ public class MenuController {
 	
 	//메뉴 관리 GET
 	@RequestMapping(value = "/registerMenu", method = RequestMethod.GET) 
-	public String registerMenu() { 
+	public String registerMenu(Model model) {
+		menuVo vo = new menuVo();
+		model.addAttribute("menuId", "null");
+		model.addAttribute("menuDetail", vo);
 		return "menu/menu"; 
 	}
-	
+		
 	//메뉴 등록 POST
 	@RequestMapping(value = "/insertMenu", method = RequestMethod.POST) 
 	public String insertMenu(Model model, @ModelAttribute menuVo reqDto) { 
@@ -62,5 +67,15 @@ public class MenuController {
 		String json = mapper.writeValueAsString(menuList);
 		System.out.println(json);
         return json;
+	}
+	
+	//메뉴 수정 GET
+	@RequestMapping(value = "/editMenu/{id}", method = RequestMethod.GET) 
+	public String registerMenu(@PathVariable int id, Model model) {
+		menuVo menuDetail = service.getMenuDtlById(id);
+		model.addAttribute("menuId", id);
+	    model.addAttribute("menuDetail", menuDetail);
+	    System.out.println(menuDetail);
+		return "menu/menu"; 
 	}
 }

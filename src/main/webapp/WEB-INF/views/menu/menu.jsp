@@ -20,7 +20,7 @@
 	                  		<label class="col-sm-2 col-sm-2 control-label">구분</label>
 		          			<div class="col-sm-10 radio">
 				            	<label>
-					              	<input type="radio" name="type" id="drink" value="drink" checked>
+					              	<input type="radio" name="type" id="drink" value="drink">
 					              	음료
 				              	</label>
 				              	<label>
@@ -141,6 +141,114 @@
 	</section>
       <!-- /wrapper -->
 </section>
+
+<!-- <div class="form-group">
+	<label class="col-sm-2 col-sm-2 control-label">구분</label>
+	<div class="col-sm-10 radio">
+		{{if type == "drink"}}   
+			<label>
+	          	<input type="radio" name="type" id="drink" value="drink" checked>
+	          	음료
+	      	</label>
+	      	<label>
+	          	<input type="radio" name="type" id="bakery" value="bakery">
+	          	베이커리
+	      	</label>
+		{{else}}
+			<label>
+	          	<input type="radio" name="type" id="drink" value="drink">
+	          	음료
+	      	</label>
+	      	<label>
+	          	<input type="radio" name="type" id="bakery" value="bakery" checked>
+	          	베이커리
+	      	</label>
+		{{/if}}
+  	</div>
+</div>
+<div class="form-group">
+	<label class="col-sm-2 col-sm-2 control-label">메뉴명</label>
+  	<div class="col-sm-10">
+    	<input type="text" name="menuNm" id="name" value="\${menuNm}" placeholder="메뉴명을 입력하세요." class="form-control" required>
+  	</div>
+</div>
+<div class="form-group">
+	<label class="col-sm-2 col-sm-2 control-label">종류</label>
+  	<div class="col-sm-10">
+    	<select name="kind" class="form-control">
+        	<option value="ESP">에스프레소</option>
+          	<option value="TWG">티(TWG)</option>
+          	<option value="SHA">쉐이크</option>
+          	<option value="ADE">에이드</option>
+          	<option value="LAT">라떼</option>
+          	<option value="JUI">주스</option>
+          	<option value="SMO">스무디</option>
+          	<option value="BRE">빵</option>
+          	<option value="DES">디저트</option>
+          	<option value="COO">쿠키</option>
+        </select>
+  	</div>
+</div>
+<div class="form-group">
+	<label class="col-sm-2">메인 이미지</label>
+	<div class="col-sm-10">
+    	<input type="text" name="imgSrc" placeholder="이미지 링크를 입력하세요." class="form-control" required>
+ 	 </div>
+</div>
+<div class="form-group">
+	<label class="col-sm-2 col-sm-2 control-label">상세 설명</label>
+  	<div class="col-sm-10">
+    	<input type="text" name="descript" placeholder="상세 설명을 입력하세요." class="form-control" required>
+ 	 </div>
+</div>
+<div class="form-group">
+	<label class="col-sm-2 control-label">칼로리</label>
+  	<div class="col-sm-4">
+    	<input type="number" name="calorie" class="form-control round-form">
+    </div>
+    <label class="col-sm-1 control-label">당류</label>
+    <div class="col-sm-4">
+    	<input type="number" name="sugar" class="form-control round-form">
+    </div>
+</div>
+<div class="form-group">
+	<label class="col-sm-2 control-label">단백질</label>
+    <div class="col-sm-4">
+    	<input type="number" name="protein" class="form-control round-form">
+    </div>
+    <label class="col-sm-1 control-label">포화지방</label>
+    <div class="col-sm-4">
+    	<input type="number" name="fat" class="form-control round-form">
+    </div>
+</div>
+<div class="form-group">
+	<label class="col-sm-2 control-label">나트륨</label>
+    <div class="col-sm-4">
+    	<input type="number" name="salt" class="form-control round-form">
+    </div>
+    <label class="col-sm-1 control-label">카페인</label>
+    <div class="col-sm-4">
+    	<input type="number" name="caffeine" class="form-control round-form">
+    </div>
+</div>
+<div class="form-group">
+	<label class="col-sm-2 col-sm-2 control-label">상태</label>
+  	<div class="col-sm-10">
+          <input type="checkbox" name="status" data-toggle="switch" checked/>
+  	</div>
+</div>
+<div class="form-group">
+	<label class="col-sm-2 col-sm-2 control-label">알레르기 성분</label>
+  	<div class="col-sm-10">
+    	<input type="text" name="allergy" placeholder="알레르기 성분을 입력하세요." class="form-control">
+ 	 </div>
+</div>
+<div class="form-group last">
+    <div class="col-sm-12 text-center">		                
+    	<button type="submit" class="btn btn-theme">등록</button>
+    	<button onclick="location.href='/menu/getMenu'" class="btn btn-theme04" type="button">취소</button>
+    </div>
+</div> -->
 <script src="${pagecontext.request.contextpath}/lib/jquery/jquery.min.js"></script>
 <script src="${pagecontext.request.contextpath}/lib/bootstrap/js/bootstrap.min.js"></script>
 <script class="include" type="text/javascript" src="${pagecontext.request.contextpath}/lib/jquery.dcjqaccordion.2.7.js"></script>
@@ -165,4 +273,38 @@
 <script type="text/javascript" src="${pagecontext.request.contextpath}/lib/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
 <script src="${pagecontext.request.contextpath}/lib/advanced-form-components.js"></script>
 <script src="${pagecontext.request.contextpath}/lib/form-component.js"></script>
+<script>
+var menuId = ${menuId};
+var menuDetail= "${menuDetail}";
+var menuDtlObj = {  //파라미터를 자바스크립트 객체로 변환
+		id : menuId,
+		type : "${menuDetail.type}",
+		menuNm : "${menuDetail.menuNm}",
+		kind : "${menuDetail.kind}",
+		descript : "${menuDetail.descript}",
+		calorie : "${menuDetail.calorie}",
+		sugar : "${menuDetail.sugar}",
+		protein : "${menuDetail.protein}",
+		fat : "${menuDetail.fat}",
+		salt : "${menuDetail.salt}",
+		caffeine : "${menuDetail.caffeine}",
+		status : "${menuDetail.status}",
+		allergy : "${menuDetail.allergy}",
+		imgSrc : "${menuDetail.imgSrc}"
+};	
+	
+
+$(document).ready(function(){
+	  if(menuId != null && menuId != ""){
+		  $('h3.font-JejuGothic').html("<i class=\"fa fa-angle-right\"></i> 메뉴 수정")
+		  if(menuDtlObj.type == 'drink'){
+			  $("input:radio[name='type']:radio[value='drink']").attr("checked",true);
+		  }else{
+			  $("input:radio[name='type']:radio[value='bakery']").attr("checked",true);
+		  }
+	  }else{
+		  $("input:radio[name='type']:radio[value='drink']").attr("checked",true);
+	  }
+})
+</script>
 </html>

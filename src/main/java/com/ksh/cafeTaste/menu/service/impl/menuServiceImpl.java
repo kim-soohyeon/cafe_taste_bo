@@ -26,5 +26,10 @@ public class menuServiceImpl implements menuService{
 		return dao.getMenuList();
 	}
 
+	@Override
+	public menuVo getMenuDtlById(int id) {
+		return dao.getMenuDtlById(id);
+	}
+
 
 }

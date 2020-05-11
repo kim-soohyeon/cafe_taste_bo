@@ -11,4 +11,6 @@ public interface menuDAO {
 
 	public List<HashMap> getMenuList();
 
+	public menuVo getMenuDtlById(int id);
+
 }

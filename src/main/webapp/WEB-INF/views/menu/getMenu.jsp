@@ -47,7 +47,7 @@
 			<td><span class="label label-warning label-mini" style="font-size: 84%;">비활성</span></td>
 		{{/if}}    
 	    <td>
-	      <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
+	      <button onclick="location.href='/menu/editMenu/\${id}'" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
 	      <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
 	    </td>
 	  </tr>
